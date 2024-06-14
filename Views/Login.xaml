@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tp4desafiologin.Views.Login"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             Title="Login">
+    <Grid RowDefinitions=".3*,.7*">
+        <Image Aspect="AspectFill" Source="drones.jpg"></Image>
+        <Grid BackgroundColor="Aqua" Opacity=".4"></Grid>
+        <Grid ColumnDefinitions="*,*">
+            <Image Aspect="AspectFit" HeightRequest="120" Source="logopng.png" ></Image>
+
+            <skia:SKLottieView Grid.Column="1" HeightRequest="100" RepeatCount="-1" Source="dronito.json"></skia:SKLottieView>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-5,-2"
+                            CornerRadius="30,30,0,0"
+                            Fill="White">
+            </RoundRectangle>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold" FontFamily="bold" FontSize="Medium" Text="Bienvenido" TextColor="CadetBlue"></Label>
+                <Label FontFamily="medium" Text="Logearse para continuar" TextColor="CadetBlue"></Label>
+
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*" >
+                    <RoundRectangle BackgroundColor="LightCyan" CornerRadius="10" HeightRequest="60" 
+                                    HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="60">
+                        
+                    </RoundRectangle>
+                    <Image HorizontalOptions="Center" >
+
+                        <Image.Source >
+                            <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf0e0;" Size="44" Color="CadetBlue" ></FontImageSource>
+                        </Image.Source>   
+                     
+                    </Image>
+                    <Entry Grid.Column="1" Placeholder="Mail" VerticalOptions="Center"></Entry>
+                </Grid>
+
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*" >
+                    <RoundRectangle BackgroundColor="LightCyan" CornerRadius="10" HeightRequest="60" 
+                    HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="60">
+
+                    </RoundRectangle>
+                    <Image HorizontalOptions="Center" >
+
+                        <Image.Source >
+                            <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf084;" Size="44" Color="CadetBlue" ></FontImageSource>
+                        </Image.Source>
+
+                    </Image>
+                    <Entry Grid.Column="1" Placeholder="Contraseña" VerticalOptions="Center" IsPassword="True"></Entry>
+                </Grid>
+
+                <Button Margin="0,20,0,0" BackgroundColor="CadetBlue" HeightRequest="60" Text="Login" TextColor="White"></Button>
+                <Label Margin="0,20,0,-10" HorizontalOptions="Center" Text="Olvido su contraseña?" TextColor="Blue" TextDecorations="Underline"></Label>
+                <Button Margin="0,30,0,0" BackgroundColor="White" HeightRequest="60" Text="Crear cuenta" TextColor="Blue"></Button>
+
+            </VerticalStackLayout>
+        </Grid>
+        
+        
+    </Grid>
+</ContentPage>
